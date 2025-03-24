@@ -7,9 +7,7 @@ name = "mypackage"
 version = "0.1.0"
 description = "Project Description"
 authors = [{ name = "James Lazo", email = "me@jameslazo.com" }]
-
-[project.dependencies]
-requests = "^2.32.0"
+dependencies = ["requests"]
 
 [project.optional-dependencies]
 dev = ["pytest", "ruff"]

@@ -8,5 +8,9 @@
       "extensions": ["ms-python.python"]
     }
   },
-  "postCreateCommand": "pip install -e .[dev]"
+  "workspaceFolder": "/workspace",
+  "postCreateCommand": "pip install -e .[dev]",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind"
+  ]
 }
