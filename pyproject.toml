@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mypackage"
+version = "0.1.0"
+description = "Project Description"
+authors = [{ name = "James Lazo", email = "me@jameslazo.com" }]
+
+[project.dependencies]
+requests = "^2.32.0"
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[tool.pytest.ini_options]
+minversion = "8.5.0"
+testpaths = ["tests"]
+# filterwarnings = []
+# markers = []
+
+[tool.semantic_release]
+branch = "main"
+version_source = "tag"
+commit_message = "chore(release): {version} [skip ci]"
+changelog_file = "CHANGELOG.md"
+version_variable = "VERSION"
+upload_to_pypi = false
